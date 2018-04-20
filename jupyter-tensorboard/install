@@ -1,1 +1,2 @@
-RUN pip install jupyter-tensorboard
+RUN pip install ipython jupyter jupyter-tensorboard --upgrade
+RUN jupyter tensorboard enable --system
