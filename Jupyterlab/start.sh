@@ -13,7 +13,7 @@ c = get_config()
 c.LabApp.notebook_dir = '/'
 c.LabApp.tornado_settings = {'headers': {'Content-Security-Policy': 'frame-ancestors *'}, 'static_url_prefix': '${PREFIX}static/'}
 c.LabApp.base_url = '${PREFIX}'
-c.LabApp.default_url = '/mnt/domino_chuck/testing_fork'
+c.LabApp.default_url = 'mnt/domino_chuck/testing_fork'
 c.LabApp.token = u''
 EOF
                                                                                                                                     
