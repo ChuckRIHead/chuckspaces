@@ -14,6 +14,7 @@ c.LabApp.notebook_dir = '/'
 c.LabApp.tornado_settings = {'headers': {'Content-Security-Policy': 'frame-ancestors *'}, 'static_url_prefix': '${PREFIX}static/'}
 c.LabApp.base_url = '${PREFIX}'
 c.NotebookApp.default_url = '/tree${DOMINO_WORKING_DIR}'
+c.LabApp.default_url = '/tree${DOMINO_WORKING_DIR}'
 
 c.LabApp.token = u''
 EOF
