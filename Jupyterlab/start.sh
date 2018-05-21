@@ -13,7 +13,7 @@ c = get_config()
 c.LabApp.notebook_dir = '${DRT_WORKING_DIR:-"/"}'
 c.LabApp.tornado_settings = {'headers': {'Content-Security-Policy': 'frame-ancestors *'}, 'static_url_prefix': '${PREFIX}static/'}
 c.LabApp.base_url = '${PREFIX}'
-c.LabApp.default_url = '/mnt'
+c.LabApp.default_url = '/lab/tree/$DRT_WORKING_DIR'
 c.LabApp.token = u''
 EOF
                                                                                                                                     
