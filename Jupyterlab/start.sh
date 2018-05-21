@@ -10,7 +10,7 @@ PREFIX=/${DOMINO_PROJECT_OWNER}/${DOMINO_PROJECT_NAME}/notebookSession/${DOMINO_
 
 cat >> $CONF_FILE << EOF
 c = get_config()
-c.LabApp.notebook_dir = '${DRT_WORKING_DIR:-"/"}'
+c.LabApp.notebook_dir = '${DOMINO_WORKING_DIR:-"/"}'
 c.LabApp.tornado_settings = {'headers': {'Content-Security-Policy': 'frame-ancestors *'}, 'static_url_prefix': '${PREFIX}static/'}
 c.LabApp.base_url = '${PREFIX}'
 c.LabApp.default_url = '/lab/tree$DOMINO_WORKING_DIR'
