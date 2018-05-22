@@ -18,6 +18,6 @@ print(c.NotebookApp.default_url)
 c.NotebookApp.token = u''
 EOF
 echo "c.NotebookApp.default_url after ipython_notebook_config.py written"
-echo "/lab/tree/mnt/domino_chuck/testing_fork"
+echo "/lab/tree/mnt"
 COMMAND='jupyter-lab --config="$CONF_FILE" --no-browser --ip="0.0.0.0" 2>&1'
 eval ${COMMAND}                                                                                                              
