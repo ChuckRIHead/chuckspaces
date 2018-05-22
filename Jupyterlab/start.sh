@@ -19,6 +19,6 @@ print(c.NotebookApp.default_url)
 c.NotebookApp.token = u''
 EOF
 echo "c.NotebookApp.default_url after ipython_notebook_config.py written"
-echo "/lab/tree/$DOMINO_WORKING_DIR"
+echo "/lab/tree$DOMINO_WORKING_DIR"
 COMMAND='jupyter-lab --config="$CONF_FILE" --no-browser --ip="0.0.0.0" 2>&1'
 eval ${COMMAND}                                                                                                              
