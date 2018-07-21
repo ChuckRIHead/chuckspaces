@@ -31,6 +31,6 @@ mkdir -p /home/ubuntu/.jupyter/profile_default/static/custom/
  printf "\nc.NotebookApp.token = u'' \n\n" >> /home/ubuntu/.jupyter/jupyter_notebook_config.py 
  
  #disable quit button in Jupyter 5.5+
- echo NotebookApp.quit_button = FALSE >> jupyter_notebook_config.py
+ echo NotebookApp.quit_button = FALSE >> /home/ubuntu/.jupyter/jupyter_notebook_config.py
  
  chown -R ubuntu:ubuntu /home/ubuntu/.jupyter 
