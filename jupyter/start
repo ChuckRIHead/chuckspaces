@@ -8,7 +8,7 @@ CONF_FILE="${CONF_DIR}/jupyter_notebook_config.py"
 mkdir -p "${CONF_DIR}"
 
 cat <<EOF >>"${CONF_FILE}"
-#c.NotebookApp.notebook_dir = '${DRT_WORKING_DIR:-"/"}'
+c.NotebookApp.notebook_dir = '/'
 c.NotebookApp.tornado_settings = {'headers': {'Content-Security-Policy': 'frame-ancestors *'}}
 #c.NotebookApp.default_url = '/tree${DOMINO_WORKING_DIR}'
 EOF
