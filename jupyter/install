@@ -15,12 +15,6 @@ echo '# Allow embedding of notebooks in iframes' >> /home/ubuntu/.jupyter/jupyte
 echo 'c.NotebookApp.tornado_settings = { "headers": { "Content-Security-Policy": "frame-ancestors *" } }' >> /home/ubuntu/.jupyter/jupyter_notebook_config.py 
 echo "c.NotebookApp.token = ''" >> /home/ubuntu/.jupyter/jupyter_notebook_config.py
 
-#set the working directory and the opening folder
-echo c.NotebookApp.notebook_dir = '${DOMINO_WORKING_DIR:-"/"}' >> /home/ubuntu/.jupyter/jupyter_notebook_config.py
-# echo c.NotebookApp.tornado_settings = {'headers': {'Content-Security-Policy': 'frame-ancestors *'}} >> /home/ubuntu/.jupyter/jupyter_notebook_config.py
-# echo c.NotebookApp.default_url = '/tree${DOMINO_WORKING_DIR}' >> /home/ubuntu/.jupyter/jupyter_notebook_config.py
-
-
 #Custom js for domino header. New noebooks open within the same tab with the Domino banner. 
 mkdir -p /home/ubuntu/.jupyter/custom/
 echo "require(['base/js/namespace'], function(jupyter) { jupyter._target='_self'; });" >> /home/ubuntu/.jupyter/custom/custom.js 
