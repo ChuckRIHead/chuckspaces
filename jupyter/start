@@ -1,9 +1,10 @@
 #!/bin/bash
+#!/bin/bash
 set -o nounset -o errexit -o pipefail
 
 IP_ADDR=$(/sbin/ifconfig eth0 | grep "inet addr" | cut -d ":" -f2 | cut -d " " -f1)
-CONF_DIR="/home/ubuntu/.jupyter/"
-CONF_FILE="${CONF_DIR}/jupyter_notebook_config.py"
+CONF_DIR="$HOME/.ipython/profile_default"
+CONF_FILE="${CONF_DIR}/ipython_notebook_config.py"
 
 mkdir -p "${CONF_DIR}"
 
@@ -13,3 +14,5 @@ COMMAND='jupyter notebook --no-browser --ip=* 2>&1'
 FINAL_COMMAND=$(echo "${COMMAND}" | sed "s/--ip=\\*/--ip=${IP_ADDR}/")
 
 eval ${FINAL_COMMAND}
+
+
