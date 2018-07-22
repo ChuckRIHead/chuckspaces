@@ -23,7 +23,6 @@ echo "require(['base/js/namespace'], function(jupyter) { jupyter._target='_self'
  mkdir -p /home/ubuntu/.jupyter 
  printf "\nc.NotebookApp.token = u'' \n\n" >> /home/ubuntu/.jupyter/jupyter_notebook_config.py 
  
- #disable quit button in Jupyter 5.5+
- echo c.NotebookApp.quit_button = False >> /home/ubuntu/.jupyter/jupyter_notebook_config.py
+ 
  
  chown -R ubuntu:ubuntu /home/ubuntu/.jupyter 
