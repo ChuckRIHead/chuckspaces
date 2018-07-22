@@ -19,7 +19,7 @@ echo "c.NotebookApp.token = ''" >> /home/ubuntu/.jupyter/jupyter_notebook_config
 
 #Custom js for domino header
 mkdir -p /home/ubuntu/.jupyter/custom/
-echo "require(['base/js/namespace'], function(IPython) { IPython._target='_self'; });" >> /home/ubuntu/.jupyter/custom/custom.js 
+echo "require(['base/js/namespace'], function(jupyter) { jupyter._target='_self'; });" >> /home/ubuntu/.jupyter/custom/custom.js 
 
 # Disable the login for Jupyter
  mkdir -p /home/ubuntu/.jupyter 
