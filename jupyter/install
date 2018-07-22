@@ -16,7 +16,7 @@ echo 'c.NotebookApp.tornado_settings = { "headers": { "Content-Security-Policy":
 echo "c.NotebookApp.token = ''" >> /home/ubuntu/.jupyter/jupyter_notebook_config.py
 
 #set the working directory and the opening folder
-# echo c.NotebookApp.notebook_dir = '${DRT_WORKING_DIR:-"/"}' >> /home/ubuntu/.jupyter/jupyter_notebook_config.py
+echo c.NotebookApp.notebook_dir = '${DOMINO_WORKING_DIR:-"/"}' >> /home/ubuntu/.jupyter/jupyter_notebook_config.py
 # echo c.NotebookApp.tornado_settings = {'headers': {'Content-Security-Policy': 'frame-ancestors *'}} >> /home/ubuntu/.jupyter/jupyter_notebook_config.py
 # echo c.NotebookApp.default_url = '/tree${DOMINO_WORKING_DIR}' >> /home/ubuntu/.jupyter/jupyter_notebook_config.py
 
